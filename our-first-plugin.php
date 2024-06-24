@@ -8,13 +8,13 @@
  * Author URI:        https://author.example.com/
  */
 
- add_filter("the_title","change_title");
- function change_title($post_title) {
+ add_filter("the_title","wedevs_ofp_change_title");
+ function wedevs_ofp_change_title($post_title) {
     return strtoupper($post_title);
  }
 
- add_filter('the_content','change_content');
- function change_content( $post_content ) {
+ add_filter('the_content','wedevs_ofp_change_content');
+ function wedevs_ofp_change_content( $post_content ) {
     // find word count
     $content = strip_tags($post_content);
     $word_count = str_word_count($content);
